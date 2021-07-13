@@ -1,0 +1,11 @@
+<launch>
+	<arg name="world_index" default="0"/>
+  <include file="$(find pursuit_evasion)/launch/robot_amcl.launch">
+    <arg name="world_index" value="$(arg world_index)"/>
+    <arg name="map_file" value="$(find pursuit_evasion)/maps/world$(arg world_index).yaml"/>
+  </include>
+  <include file="$(find pursuit_evasion)/launch/navigation/detect_pursuer.launch" />
+  <include file="$(find pursuit_evasion)/launch/navigation/move_pursuer.launch" />
+
+  <node name='pursuer_console' type='rqt_gui' pkg="rqt_gui"  args="--perspective-file $(find pursuit_evasion)/pursuer_detections.perspective" respawn="false" output="screen"/>
+</launch>

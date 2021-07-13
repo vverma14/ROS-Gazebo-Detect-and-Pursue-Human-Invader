@@ -1,0 +1,5 @@
+<launch>
+	  <group ns="tb3_0">
+	    <node name='pursuer_detector' type='pursuer_detector.py' pkg="pursuit_evasion" output="screen" />
+    </group>
+</launch>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>pursuit_evasion_description</name>
+  <version>0.0.0</version>
+  <description>CSE598 Perception in Robotics (Spring 2020) Project 3 Robot Description</description>
+
+  <maintainer email="zgiacome@asu.edu">Zakk Giacometti</maintainer>
+  <maintainer email="vverma14@asu.edu">Vivek Verma</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>turtlebot3_description</exec_depend>
+
+  <export>
+  </export>
+</package>

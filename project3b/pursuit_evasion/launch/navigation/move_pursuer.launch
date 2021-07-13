@@ -1,0 +1,26 @@
+<launch>
+	 <arg name="world_index" default="0"/>
+	<!-- <group ns="tb3_0">
+		<node name='nav_test' type='goal_pub.py' pkg="pursuit_evasion" output="screen"/>
+	</group> -->
+
+  <group if="$(eval arg('world_index') == 0)"> 
+	  <group ns="tb3_0">
+	    <node name='nav_test' type='move_pursuer.py' pkg="pursuit_evasion" output="screen">
+	      
+	        
+	  </node>
+	  </group>
+  </group>
+
+  <group if="$(eval arg('world_index') == 1)"> 
+	  <group ns="tb3_0">
+	    <node name='nav_test' type='move_pursuer.py' pkg="pursuit_evasion" output="screen">
+	      
+	        
+	      
+	    </node>
+	  </group>
+  </group>
+
+</launch>
